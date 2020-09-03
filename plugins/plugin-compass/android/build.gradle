@@ -1,0 +1,7 @@
+//dependencies {
+//    compile project(':plugin-compass')
+//    compile project(':plugin-magnetometer')
+//    compile project(':plugin-magnetometer/android')
+//}
+//
+//ext.description = 'API to access compass features for the android platform'

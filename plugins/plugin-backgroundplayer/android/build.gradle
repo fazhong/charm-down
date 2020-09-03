@@ -1,0 +1,6 @@
+//dependencies {
+//    compile project(':plugin-audio-recording')
+//    compile project(':core/android')
+//}
+//
+//ext.description = 'API to access audio recording features for the android platform'

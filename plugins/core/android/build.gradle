@@ -1,0 +1,14 @@
+//apply from: '../../../gradle/android-build.gradle'
+//
+//dependencies {
+//    compile project(":core")
+//    compile files("$ANDROID_HOME/platforms/android-$androidPlatformVersion/android.jar")
+//    compile "org.javafxports:jfxdvk:$javafxportsVersion"
+//    compile "com.android.support:support-v4:$androidSupportV4Version"
+//}
+//
+//ext.description = 'API to access common features for the android platform'
+//
+//project.afterEvaluate {
+//    explodeAarDependencies(project, project.configurations.compile)
+//}

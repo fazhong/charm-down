@@ -1,0 +1,7 @@
+//dependencies {
+//    compile project(':plugin-accelerometer')
+//    compile project(':plugin-lifecycle')
+//    compile project(':plugin-lifecycle/android')
+//}
+//
+//ext.description = 'API to access accelerometer features for the android platform'

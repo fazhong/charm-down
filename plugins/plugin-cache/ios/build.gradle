@@ -1,0 +1,9 @@
+dependencies {
+    compile project(':core/ios')
+    compile project(':plugin-cache')
+}
+
+ext.description = 'API to access cache features for the iOS platform'
+
+def service = "Cache"
+

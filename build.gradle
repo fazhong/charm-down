@@ -1,0 +1,121 @@
+apply plugin: 'base'
+apply plugin: 'java'
+
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            url 'https://plugins.gradle.org/m2/'
+        }
+    }
+
+    dependencies {
+        classpath 'gradle.plugin.nl.javadude.gradle.plugins:license-gradle-plugin:0.13.1'
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.8'
+    }
+}
+
+group = 'com.gluonhq'
+version = '3.9.0-SNAPSHOT'
+
+compileJava {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
+
+subprojects {
+    repositories {
+        maven {
+            url "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+        maven {
+            url "https://oss.sonatype.org/content/repositories/releases"
+        }
+        jcenter()
+        mavenCentral()
+    }
+    
+    if (project.name.endsWith("/android")) {
+//        File androidMavenRepository = project.file("$ANDROID_HOME/extras/android/m2repository")
+//        if (! androidMavenRepository.exists()) {
+//            throw new GradleException("Unable to find Android repository at: " + androidMavenRepository)
+//        }
+//
+//        File googleMavenRepository = project.file("$ANDROID_HOME/extras/google/m2repository")
+//        if (! googleMavenRepository.exists()) {
+//            throw new GradleException("Unable to find Google repository at: " + googleMavenRepository)
+//        }
+//        repositories {
+//            maven {
+//                url androidMavenRepository.toURI().toString()
+//            }
+//            maven {
+//                url googleMavenRepository.toURI().toString()
+//            }
+//            google()
+//        }
+    }
+
+    apply plugin: 'java'
+    apply plugin: 'maven'
+    apply from: rootProject.file('gradle/code-quality.gradle')
+    apply plugin: 'com.github.ben-manes.versions'
+    apply from: rootProject.file('mavenPublish.gradle')
+    
+    if (project.name.endsWith("/ios")) {
+        apply from: rootProject.file('gradle/ios-build.gradle')
+    }
+    
+    group = rootProject.group
+    version = rootProject.version
+    archivesBaseName = 'charm-down-' + name.replaceAll("/", "-")
+
+    configurations {
+        published
+    }
+
+    if (project.name.endsWith("/android") && ! project.name.contains("core")) {
+        dependencies {
+            compile project(':core/android')
+        }
+    }
+
+    compileJava {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    task sourceJar(type: Jar) {
+        from sourceSets.main.allSource
+        classifier = 'sources'
+    }
+
+    task javadocJar(type: Jar, dependsOn: javadoc) {
+        from javadoc.destinationDir
+        classifier = 'javadoc'
+    }
+
+    artifacts {
+        archives sourceJar, javadocJar
+    }
+}
+
+task allJavadoc(type: Javadoc) {
+    source subprojects.collect { project ->
+        project.sourceSets.main.allJava.matching {
+            exclude 'com/gluonhq/impl/**/*'
+        }
+    }
+    classpath = files(subprojects.collect { project ->
+        project.sourceSets.main.compileClasspath
+    })
+}
+javadoc.finalizedBy allJavadoc
+
+allprojects{
+    tasks.withType(JavaCompile) { compile ->
+        compile.options.compilerArgs +=
+           ["-XDstringConcat=inline",
+            "-XDignore.symbol.file", "-encoding", "UTF-8"]
+    }
+}

@@ -1,0 +1,7 @@
+dependencies {
+    compile project(':core/ios')
+    compile project(':plugin-magnetometer/ios')
+    compile project(':plugin-compass')
+}
+
+ext.description = 'API to access compass features for the iOS platform'

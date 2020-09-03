@@ -1,0 +1,5 @@
+//dependencies {
+//    compile project(':plugin-statusbar')
+//}
+//
+//ext.description = 'API to access status bar features for the android platform'

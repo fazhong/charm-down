@@ -1,0 +1,6 @@
+dependencies {
+    compile project(':plugin-barcode-scan')
+    compile 'com.google.zxing:core:3.3.3'
+}
+
+ext.description = 'API to access barcode scan features for the android platform'

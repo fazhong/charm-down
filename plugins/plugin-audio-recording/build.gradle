@@ -1,0 +1,6 @@
+dependencies {
+    compile project(':core')
+    compile project(':plugin-storage')
+}
+
+ext.description = 'Common API to access audio recording features'

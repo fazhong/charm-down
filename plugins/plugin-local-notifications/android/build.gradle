@@ -1,0 +1,5 @@
+//dependencies {
+//    compile project(':plugin-local-notifications')
+//}
+//
+//ext.description = 'API to access local notifications features for the android platform'

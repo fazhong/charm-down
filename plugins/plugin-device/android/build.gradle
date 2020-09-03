@@ -1,0 +1,6 @@
+//dependencies {
+//    compile project(':plugin-device')
+//    compile project(':core')
+//}
+//
+//ext.description = 'API to access device features for the android platform'

@@ -1,0 +1,5 @@
+//dependencies {
+//    compile project(':plugin-browser')
+//}
+//
+//ext.description = 'API to access browser features for the android platform'

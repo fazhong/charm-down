@@ -1,0 +1,5 @@
+//dependencies {
+//    compile project(':plugin-cache')
+//}
+//
+//ext.description = 'API to access cache for the android platform'

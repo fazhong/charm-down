@@ -1,0 +1,32 @@
+//apply from: '../../../gradle/android-build.gradle'
+//
+//repositories {
+//    google()
+//    mavenCentral()
+//}
+//
+//dependencies {
+//    compile project(':plugin-augmented-reality')
+//    compile 'com.google.ar:core:1.5.0'
+//    compile 'de.javagl:obj:0.3.0'
+//}
+//
+//ext.description = 'API to access Augmented Reality features for the android platform'
+//
+//project.afterEvaluate {
+//    explodeAarDependencies(project, project.configurations.compile)
+//}
+//
+//task bundleNativeAar {
+//    doLast {
+//        nativeAar("$project.buildDir", project.configurations.compile)
+//    }
+//}
+//
+//jar {
+//    dependsOn bundleNativeAar
+//    from("$project.buildDir/lib/armeabi-v7a")
+//    {
+//        into "lib/armeabi-v7a"
+//    }
+//}

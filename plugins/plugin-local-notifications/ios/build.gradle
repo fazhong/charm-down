@@ -1,0 +1,22 @@
+dependencies {
+    compile project(':core/ios')
+    compile project(':plugin-local-notifications')
+}
+
+ext.description = 'API to access local notifications features for the iOS platform'
+
+def service = "LocalNotifications"
+
+task xcodebuild {
+    doLast {
+        xcodebuildIOS("$project.buildDir","$project.projectDir", "$service")
+    }
+}
+
+jar {
+    dependsOn xcodebuild
+    from("$project.buildDir/native/lib${service}.a")
+    {
+        into "native"
+    }
+}

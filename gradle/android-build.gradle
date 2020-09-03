@@ -1,0 +1,67 @@
+//
+//ext.explodeAarDependencies = {project, configuration ->
+//    Set<File> files = configuration.copy().resolve()
+//    files.findAll {
+//        it.name.endsWith('.aar')
+//    }.each { aarFile ->
+//        def aarFileWithoutExtension = aarFile.name.take(aarFile.name.lastIndexOf('.'))
+//        final File explodedDirectory = new File(aarFile.parent, "exploded")
+//        if (!explodedDirectory.exists()) {
+//            project.logger.info("Explode aar file: $aarFile into $explodedDirectory")
+//
+//            if (!explodedDirectory.mkdirs()) {
+//                throw new GradleException("Unable to create base directory to explode aar into: " + explodedDirectory)
+//            }
+//
+//            project.copy {
+//                from project.zipTree(aarFile)
+//                into project.file(explodedDirectory)
+//                include 'classes.jar'
+//                include 'libs/*.jar'
+//                include 'jni/armeabi-v7a/*'
+//                rename('classes.jar', "${aarFileWithoutExtension}.jar")
+//            }
+//        }
+//
+//        if (project.file("$explodedDirectory.absolutePath/${aarFileWithoutExtension}.jar").exists()) {
+//            project.dependencies.add(configuration.name, project.files("$explodedDirectory.absolutePath/${aarFileWithoutExtension}.jar"))
+//        }
+//        if (project.file("$explodedDirectory.absolutePath/libs").exists()) {
+//            project.files(project.file("$explodedDirectory.absolutePath/libs").listFiles()).findAll {
+//                it.name.endsWith('.jar')
+//            }.each {
+//                project.dependencies.add(configuration.name, project.files(it))
+//            }
+//        }
+//    }
+//}
+//
+//ext.nativeAar = {buildDir, configuration ->
+//    Set<File> files = configuration.copy().resolve()
+//    files.findAll {
+//        it.name.endsWith('.aar')
+//    }.each { aarFile ->
+//        def aarFileWithoutExtension = aarFile.name.take(aarFile.name.lastIndexOf('.'))
+//        final File explodedDirectory = new File(aarFile.parent, "exploded")
+//
+//        if (project.file("$explodedDirectory.absolutePath/jni/armeabi-v7a").exists()) {
+//            final File jniDirectory = new File(buildDir, "lib/armeabi-v7a")
+//            if (! jniDirectory.exists()) {
+//                project.logger.info("Copy native libs into $jniDirectory")
+//
+//                if (! jniDirectory.mkdirs()) {
+//                    throw new GradleException("Unable to create base directory to copy native libs into: " + jniDirectory)
+//                }
+//            }
+//            project.files(project.file("$explodedDirectory.absolutePath/jni/armeabi-v7a").listFiles()).findAll {
+//                it.name.endsWith('.so')
+//            }.each { soFile ->
+//                    project.copy {
+//                        project.logger.info("Copying jni file $soFile.name into $jniDirectory")
+//                        from soFile
+//                        into project.file(jniDirectory)
+//                    }
+//            }
+//        }
+//    }
+//}

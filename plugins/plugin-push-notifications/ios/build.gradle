@@ -1,0 +1,23 @@
+dependencies {
+    compile project(':core/ios')
+    compile project(':plugin-push-notifications')
+    compile project(':plugin-runtime-args/ios')
+}
+
+ext.description = 'API to access push notifications features for the iOS platform'
+
+def service = "PushNotifications"
+
+task xcodebuild {
+    doLast {
+        xcodebuildIOS("$project.buildDir","$project.projectDir", "$service")
+    }
+}
+
+jar {
+    dependsOn xcodebuild
+    from("$project.buildDir/native/lib${service}.a")
+    {
+        into "native"
+    }
+}

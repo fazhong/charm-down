@@ -1,0 +1,22 @@
+dependencies {
+    compile project(':core/ios')
+    compile project(':plugin-dialer')
+}
+
+ext.description = 'API to access dialer features for the iOS platform'
+
+def service = "Dialer"
+
+task xcodebuild {
+    doLast {
+        xcodebuildIOS("$project.buildDir","$project.projectDir", "$service")
+    }
+}
+
+jar {
+    dependsOn xcodebuild
+    from("$project.buildDir/native/lib${service}.a")
+    {
+        into "native"
+    }
+}

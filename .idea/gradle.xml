@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="1.8" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/plugins/core" />
+            <option value="$PROJECT_DIR$/plugins/core/android" />
+            <option value="$PROJECT_DIR$/plugins/core/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-accelerometer" />
+            <option value="$PROJECT_DIR$/plugins/plugin-accelerometer/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-accelerometer/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-audio-recording" />
+            <option value="$PROJECT_DIR$/plugins/plugin-audio-recording/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-audio-recording/desktop" />
+            <option value="$PROJECT_DIR$/plugins/plugin-audio-recording/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-audioplayer" />
+            <option value="$PROJECT_DIR$/plugins/plugin-audioplayer/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-audioplayer/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-augmented-reality" />
+            <option value="$PROJECT_DIR$/plugins/plugin-augmented-reality/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-augmented-reality/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-backgroundplayer" />
+            <option value="$PROJECT_DIR$/plugins/plugin-backgroundplayer/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-backgroundplayer/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-barcode-scan" />
+            <option value="$PROJECT_DIR$/plugins/plugin-barcode-scan/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-barcode-scan/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-battery" />
+            <option value="$PROJECT_DIR$/plugins/plugin-battery/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-battery/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-ble" />
+            <option value="$PROJECT_DIR$/plugins/plugin-ble/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-ble/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-browser" />
+            <option value="$PROJECT_DIR$/plugins/plugin-browser/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-browser/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-cache" />
+            <option value="$PROJECT_DIR$/plugins/plugin-cache/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-cache/desktop" />
+            <option value="$PROJECT_DIR$/plugins/plugin-cache/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-compass" />
+            <option value="$PROJECT_DIR$/plugins/plugin-compass/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-compass/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-connectivity" />
+            <option value="$PROJECT_DIR$/plugins/plugin-connectivity/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-connectivity/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-device" />
+            <option value="$PROJECT_DIR$/plugins/plugin-device/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-device/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-dialer" />
+            <option value="$PROJECT_DIR$/plugins/plugin-dialer/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-dialer/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-display" />
+            <option value="$PROJECT_DIR$/plugins/plugin-display/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-display/desktop" />
+            <option value="$PROJECT_DIR$/plugins/plugin-display/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-in-app-billing" />
+            <option value="$PROJECT_DIR$/plugins/plugin-in-app-billing/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-in-app-billing/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-lifecycle" />
+            <option value="$PROJECT_DIR$/plugins/plugin-lifecycle/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-lifecycle/desktop" />
+            <option value="$PROJECT_DIR$/plugins/plugin-lifecycle/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-local-notifications" />
+            <option value="$PROJECT_DIR$/plugins/plugin-local-notifications/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-local-notifications/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-magnetometer" />
+            <option value="$PROJECT_DIR$/plugins/plugin-magnetometer/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-magnetometer/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-orientation" />
+            <option value="$PROJECT_DIR$/plugins/plugin-orientation/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-orientation/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-pictures" />
+            <option value="$PROJECT_DIR$/plugins/plugin-pictures/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-pictures/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-position" />
+            <option value="$PROJECT_DIR$/plugins/plugin-position/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-position/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-push-notifications" />
+            <option value="$PROJECT_DIR$/plugins/plugin-push-notifications/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-push-notifications/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-runtime-args" />
+            <option value="$PROJECT_DIR$/plugins/plugin-runtime-args/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-runtime-args/desktop" />
+            <option value="$PROJECT_DIR$/plugins/plugin-runtime-args/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-settings" />
+            <option value="$PROJECT_DIR$/plugins/plugin-settings/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-settings/desktop" />
+            <option value="$PROJECT_DIR$/plugins/plugin-settings/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-share" />
+            <option value="$PROJECT_DIR$/plugins/plugin-share/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-share/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-statusbar" />
+            <option value="$PROJECT_DIR$/plugins/plugin-statusbar/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-statusbar/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-storage" />
+            <option value="$PROJECT_DIR$/plugins/plugin-storage/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-storage/desktop" />
+            <option value="$PROJECT_DIR$/plugins/plugin-storage/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-vibration" />
+            <option value="$PROJECT_DIR$/plugins/plugin-vibration/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-vibration/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-video" />
+            <option value="$PROJECT_DIR$/plugins/plugin-video/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-video/ios" />
+            <option value="$PROJECT_DIR$/plugins/plugin-webview" />
+            <option value="$PROJECT_DIR$/plugins/plugin-webview/android" />
+            <option value="$PROJECT_DIR$/plugins/plugin-webview/ios" />
+          </set>
+        </option>
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

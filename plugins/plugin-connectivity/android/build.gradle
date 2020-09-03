@@ -1,0 +1,7 @@
+//dependencies {
+//    compile project(':plugin-connectivity')
+//    compile project(':plugin-lifecycle')
+//    compile project(':plugin-lifecycle/android')
+//}
+//
+//ext.description = 'API to access connectivity features for the android platform'
